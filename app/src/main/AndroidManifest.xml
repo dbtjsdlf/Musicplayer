@@ -1,0 +1,5 @@
+<uses-permission xmlns:tools="http://schemas.android.com/tools"
+    android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+    tools:ignore="WrongManifestParent" />
+<application
+android:requestLegacyExternalStorage="true"

@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="6"
+        tools:ignore="ExtraText">
+
+        // mp3 리스트를 보여주고 선택합니다.
+        <ListView
+            android:id="@+id/listViewMP3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        // 재생버튼, 정지버튼
+        <Button
+            android:id="@+id/btnPlay"
+            android:layout_weight="1"
+            android:layout_margin="3dp"
+            android:text="@string/재생"
+            android:textSize="30sp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            style="?android:attr/buttonBarButtonStyle"
+            tools:ignore="NestedWeights" />
+        <Button
+            android:id="@+id/btnStop"
+            android:layout_weight="1"
+            android:layout_margin="3dp"
+            android:textSize="30sp"
+            android:text="@string/정지"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            style="?android:attr/buttonBarButtonStyle" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        // 현재 재생중인 음악을 보여줍니다.
+        <TextView
+            android:id="@+id/tvMP3"
+            android:gravity="center"
+            android:text="@string/실행중인음악"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"/>
+
+        // 재생되고 있다는 애니메이션을 표현합니다.
+        <ProgressBar
+            android:id="@+id/pbMP3"
+            android:visibility="invisible"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"/>
+    </LinearLayout>
+</LinearLayout>
